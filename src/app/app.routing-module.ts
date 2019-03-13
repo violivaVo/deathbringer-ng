@@ -7,12 +7,14 @@ import { HomeComponent } from './main/home/home.component';
 import { UsersIndexComponent } from './users/users-index/users-index.component';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
 import { UpdateUserComponent } from './users/update-user/update-user.component';
+import { CreateUserComponent } from './users/create-user/create-user.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'sign-in', component: SignInComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'users', component: UsersIndexComponent },
+    { path: 'users/create', component: CreateUserComponent},
     { path: 'users/:id', component: UserDetailsComponent }, //i due punti indicano che è un url parametrico
     { path: 'users/:id/update', component: UpdateUserComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' }

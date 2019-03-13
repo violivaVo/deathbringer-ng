@@ -1,0 +1,91 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h1>
+                        Create User
+                    </h1>
+                </div>
+
+                <div class="card-body">
+
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Username: </label>
+                            <input type="text" class="form-control" [(ngModel)]="userName" name="userName">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Password: </label>
+                            <input type="password" class="form-control" [(ngModel)]="password" name="password">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Name: </label>
+                            <input type="text" class="form-control" [(ngModel)]="name" name="name">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Surname: </label>
+                            <input type="text" class="form-control" [(ngModel)]="surname" name="surname">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Email: </label>
+                            <input type="text" class="form-control" [(ngModel)]="email" name="email">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Address: </label>
+                            <input type="text" class="form-control" [(ngModel)]="address" name="address">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Civic Number: </label>
+                            <input type="text" class="form-control" [(ngModel)]="civicNumber" name="civicNumber">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Zip Code: </label>
+                            <input type="text" class="form-control" [(ngModel)]="zipCode" name="zipCode">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>City: </label>
+                            <input type="text" class="form-control" [(ngModel)]="city" name="city">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-block" (click)="create()">
+                        Create
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>

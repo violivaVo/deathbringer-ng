@@ -1,6 +1,7 @@
 export class UserContract {
     public userId: number = null;
     public userName: string = null;
+    public password: string = null;
     public email: string = null;
     public name: string = null;
     public surname: string = null;

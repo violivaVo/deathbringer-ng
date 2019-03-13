@@ -13,22 +13,6 @@ export class UsersService {
         private http: HttpClient) {
     }
 
-    public register(userName: string, email: string,
-        password: string, confirmPassword: string,
-        name: string, surname: string): Observable<UserContract> {
-
-        const url = environment.apiBaseUrl + 'api/Users/Register';
-        const body = {
-            userName,
-            password,
-            confirmPassword,
-            email,
-            name,
-            surname
-        };
-        return this.http.post<UserContract>(url, body);
-    }
-
     public fetchAll(): Observable<UserContract[]> {
         const url = environment.apiBaseUrl + 'api/Users/FetchAll';
         return this.http.post<UserContract[]>(url, null);
@@ -52,6 +36,27 @@ export class UsersService {
         const body = {
             userId,
             userName,
+            name,
+            surname,
+            email,
+            address,
+            civicNumber,
+            zipCode,
+            city,
+            isAdministrator
+        };
+        return this.http.post<UserContract>(url, body);
+    }
+
+    public createUser(userName: string, password: string, email: string,
+        name: string, surname: string, address: string,
+        civicNumber: string, zipCode: number,
+        city: string, isAdministrator: boolean): Observable<UserContract> {
+
+        const url = environment.apiBaseUrl + 'api/Users/CreateUser';
+        const body = {
+            userName,
+            password,
             name,
             surname,
             email,
