@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        <fa-icon [icon]="['fas', 'fire']"></fa-icon> Welcome to DeathBringer
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" [(ngModel)]="userName"
+                                    name="userName" placeholder="Username" [disabled]="isBusy">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password:</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <fa-icon [icon]="['fas', 'key']"></fa-icon>
+                                    </span>
+                                </div>
+                                <input type="password" class="form-control" [(ngModel)]="password"
+                                    name="password" placeholder="Password" [disabled]="isBusy">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-block" (click)="signIn()" [disabled]="isBusy">
+                        <span *ngIf="!isBusy">
+                            <fa-icon [icon]="['fas', 'lock']"></fa-icon> Sign-in
+                        </span>
+                        <span *ngIf="isBusy">
+                            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon> Signing-in...
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>

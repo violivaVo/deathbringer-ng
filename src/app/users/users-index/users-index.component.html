@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                Lista utenti
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>email</th>
+                        <th>nome</th>
+                        <th>cognome</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let currentUser of users">
+                        <td>{{currentUser.userName}}</td>
+                        <td>{{currentUser.email}}</td>
+                        <td>{{currentUser.nome}}</td>
+                        <td>{{currentUser.cognome}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a [routerLink]="['home']" class="btn btn-primary">
+                                    <fa-icon [icon]="['fas', 'search']"></fa-icon>
+                                </a>
+                                <a [routerLink]="['home']" class="btn btn-warning">
+                                    <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
+                                </a>
+                                <a [routerLink]="['home']" class="btn btn-danger">
+                                    <fa-icon [icon]="['fas', 'trash-alt']"></fa-icon>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
