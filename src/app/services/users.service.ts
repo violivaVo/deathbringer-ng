@@ -14,8 +14,8 @@ export class UsersService {
     }
 
     public register(userName: string, email: string,
-                    password: string, confirmPassword: string,
-                    nome: string, cognome: string): Observable<UserContract> {
+        password: string, confirmPassword: string,
+        name: string, surname: string): Observable<UserContract> {
 
         const url = environment.apiBaseUrl + 'api/Users/Register';
         const body = {
@@ -23,8 +23,8 @@ export class UsersService {
             password,
             confirmPassword,
             email,
-            nome,
-            cognome
+            name,
+            surname
         };
         return this.http.post<UserContract>(url, body);
     }
@@ -39,6 +39,27 @@ export class UsersService {
         const url = environment.apiBaseUrl + 'api/Users/GetUserByUsername';
         const body = {
             userName
+        };
+        return this.http.post<UserContract>(url, body);
+    }
+
+    public updateUser(userId: number, userName: string, email: string,
+        name: string, surname: string, address: string,
+        civicNumber: string, zipCode: number,
+        city: string, isAdministrator: boolean): Observable<UserContract> {
+
+        const url = environment.apiBaseUrl + 'api/Users/UpdateUser';
+        const body = {
+            userId,
+            userName,
+            name,
+            surname,
+            email,
+            address,
+            civicNumber,
+            zipCode,
+            city,
+            isAdministrator
         };
         return this.http.post<UserContract>(url, body);
     }

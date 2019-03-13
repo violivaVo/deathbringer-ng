@@ -38,7 +38,7 @@ export class UserDetailsComponent implements OnInit {
       this.usersService.getUserByUsername(this.userName).subscribe(
 
         (data: UserContract) => {
-            this.email= data.email;
+            this.email = data.email;
             this.name = data.name;
             this.surname = data.surname;
         },
