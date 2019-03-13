@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SignInResult } from './models/sign-in-result';
 
@@ -7,7 +7,7 @@ import { SignInResult } from './models/sign-in-result';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
 
 
 }

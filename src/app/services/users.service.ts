@@ -33,4 +33,13 @@ export class UsersService {
         const url = environment.apiBaseUrl + 'api/Users/FetchAll';
         return this.http.post<UserContract[]>(url, null);
     }
+
+    public getUserByUserName(userName: string) {
+
+        const url = environment.apiBaseUrl + 'api/Users/GetUserByUsername';
+        const body = {
+            userName
+        };
+        return this.http.post<UserContract>(url, body);
+    }
 }
