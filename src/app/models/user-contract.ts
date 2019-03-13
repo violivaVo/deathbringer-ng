@@ -1,11 +1,11 @@
 export class UserContract {
     public userName: string = null;
     public email: string = null;
-    public nome: string = null;
-    public cognome: string = null;
-    public indirizzo: string = null;
-    public civico: string = null;
-    public cap: number = null;
-    public citta: string = null;
+    public name: string = null;
+    public surname: string = null;
+    public address: string = null;
+    public civicNumber: string = null;
+    public zipCode: number = null;
+    public city: string = null;
     public isAdministrator: boolean = null;
 }

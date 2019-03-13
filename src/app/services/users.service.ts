@@ -15,7 +15,7 @@ export class UsersService {
 
     public register(userName: string, email: string,
                     password: string, confirmPassword: string,
-                    nome: string, cognome: string): Observable<UserContract> {
+                    name: string, surname: string): Observable<UserContract> {
 
         const url = environment.apiBaseUrl + 'api/Users/Register';
         const body = {
@@ -23,8 +23,8 @@ export class UsersService {
             password,
             confirmPassword,
             email,
-            nome,
-            cognome
+            name,
+            surname
         };
         return this.http.post<UserContract>(url, body);
     }
@@ -32,5 +32,12 @@ export class UsersService {
     public fetchAll(): Observable<UserContract[]> {
         const url = environment.apiBaseUrl + 'api/Users/FetchAll';
         return this.http.post<UserContract[]>(url, null);
+    }
+
+    public getUserByUsername(userName: string): Observable<UserContract> {
+        const url = environment.apiBaseUrl + '/api/Users/GetUserByUserName';
+        const body = {userName};
+        return this.http.post<UserContract>(url, body);
+
     }
 }

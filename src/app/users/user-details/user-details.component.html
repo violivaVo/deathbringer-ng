@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col 3">
+            <div class="col 6">
+                <div class="table">
+                    <h3>
+                        <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                        Benvenuto {{userName}}
+                    </h3>
+                    <div class="thead">
+                        <tr>
+                            <th width ="90"> Nome </th>
+                            <th width ="120"> Cognome </th>
+                            <th width ="120"> Indirizzo </th>
+                            <th width ="60"> Civico </th>
+                            <th width ="50"> CAP </th>
+                            <th width ="90"> Città </th>
+                            <th width ="150"> Username </th>
+                            <th width ="90"> Email </th>
+                        </tr>
+                    </div>
+                    <div class="tbody">
+                        <tr>
+                            <td width ="100"> {{name}} </td>
+                            <td width ="100" nowrap> {{surname}} </td>
+                            <td width ="150" nowrap> {{address}} </td>
+                            <td width ="30">  {{civicNumber}} </td>
+                            <td width ="40"> {{zipCode}} </td>
+                            <td width ="110" nowrap> {{city}} </td>
+                            <td width ="150" nowrap> {{userName}} </td>
+                            <td width ="150" nowrap> {{email}} </td>
+                        </tr>
+                    </div>
+                </div>
+                <div class="col 3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
