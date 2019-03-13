@@ -1,4 +1,5 @@
 export class SignInResult {
+    public userId: number = null;
     public userName: string = null;
     public email: string = null;
     public name: string = null;
