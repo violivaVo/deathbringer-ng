@@ -23,8 +23,8 @@
                     <tr *ngFor="let currentUser of users">
                         <td>{{currentUser.userName}}</td>
                         <td>{{currentUser.email}}</td>
-                        <td>{{currentUser.nome}}</td>
-                        <td>{{currentUser.cognome}}</td>
+                        <td>{{currentUser.name}}</td>
+                        <td>{{currentUser.surname}}</td>
                         <td>
                             <div class="btn-group">
                                 <a [routerLink]="['/users', currentUser.userName]" class="btn btn-primary">

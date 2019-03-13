@@ -1,13 +1,52 @@
-<p>
-    user-details works!
-    id: {{userName}}
-  </p>
-  <ul>
-      <li>
-          ngOnInit => scaricamento dati utente da server
-          api/Users/GetUser ( userName)
-      </li>
-      <li>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                <fa-icon [icon]="['fas', 'user']"></fa-icon>
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>nome</th>
+                        <th>cognome</th>
+                        <th>email</th>
+                        <th>via</th>
+                        <th>n. civico</th>
+                        <th>cap</th>
+                        <th>città</th>
+                        <th>admin</th>
+                        <th>user id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{userName}}</td>
+                        <td>{{name}}</td>
+                        <td>{{surname}}</td>
+                        <td>{{email}}</td>
+                        <td>{{address}}</td>
+                        <td>{{civicNumber}}</td>
+                        <td>{{zipCode}}</td>
+                        <td>{{city}}</td>
+                        <td>{{isAdministrator}}</td>
+                        <td>{{userId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <a [routerLink]="['']" class="btn btn-primary">
+                    <fa-icon [icon]="['fas', 'home']"></fa-icon>
+                </a>
 
-      </li>
-  </ul>
+                <a [routerLink]="['/users']" class="btn btn-primary">
+                    <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

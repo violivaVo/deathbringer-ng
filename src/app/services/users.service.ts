@@ -33,4 +33,12 @@ export class UsersService {
         const url = environment.apiBaseUrl + 'api/Users/FetchAll';
         return this.http.post<UserContract[]>(url, null);
     }
+
+    public showD(userName: string): Observable<UserContract> {
+        const url = environment.apiBaseUrl + 'api/Users/GetUserByUserName';
+        const body = {
+            userName
+        };
+        return this.http.post<UserContract>(url, body);
+    }
 }
