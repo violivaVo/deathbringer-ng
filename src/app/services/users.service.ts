@@ -41,4 +41,31 @@ export class UsersService {
         };
         return this.http.post<UserContract>(url, body);
     }
+
+    public userDel(userName: string): Observable<UserContract> {
+        const url = environment.apiBaseUrl + 'api/Users/Delete';
+        const body = {
+            userName
+        };
+        return this.http.post<UserContract>(url, body);
+    }
+
+    public utenteCrea(userName: string, password: string, name: string, surname: string, email: string, address: string,
+                      civicNumber: string, zipCode: number, city: string, isAdministrator: boolean){
+            const url = environment.apiBaseUrl + 'api/Users/CreateUser';
+            const body = {
+                userName,
+                password,
+                name,
+                surname,
+                email,
+                address,
+                civicNumber,
+                zipCode,
+                city,
+                isAdministrator
+            };
+            return this.http.post<UserContract>(url, body);
+
+        }
 }

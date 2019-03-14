@@ -1,0 +1,44 @@
+<h2>HTML Forms</h2>
+
+<form>
+  Username:<br>
+  <input type="text" [(ngModel)]="userName" name="username" value="Mickey">
+  <br>
+  password:<br>
+  <input type="text" [(ngModel)]="password" name="password">
+  <br>
+  name:<br>
+  <input type="text" [(ngModel)]="name" name="name">
+  <br>
+  surname:<br>
+  <input type="text" [(ngModel)]="surname" name="surname">
+  <br>
+  email:<br>
+  <input type="text" [(ngModel)]="email" name="email">
+  <br>
+  address:<br>
+  <input type="text" [(ngModel)]="address" name="address">
+  <br>
+  civic number:<br>
+  <input type="text" [(ngModel)]="civicNumber" name="civicNumber">
+  <br>
+  zipCode:<br>
+  <input type="text" [(ngModel)]="zipCode" name="zipCode">
+  <br>
+  city:<br>
+  <input type="text" [(ngModel)]="city" name="city">
+  <br>
+  is Admin:<br>
+  <input type="checkbox" [(ngModel)]="isAdministrator" name="isAdministrator">
+  <br>
+  <br>
+  <input type="submit" (click)="userCreate()">
+</form>
+
+<a [routerLink]="['']" class="btn btn-primary">
+    <fa-icon [icon]="['fas', 'home']"></fa-icon>
+</a>
+
+<a [routerLink]="['/users']" class="btn btn-primary">
+    <fa-icon [icon]="['fas', 'user']"></fa-icon>
+</a>

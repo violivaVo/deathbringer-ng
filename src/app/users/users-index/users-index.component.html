@@ -33,7 +33,7 @@
                                 <a [routerLink]="['home']" class="btn btn-warning">
                                     <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
                                 </a>
-                                <a [routerLink]="['home']" class="btn btn-danger">
+                                <a [routerLink]="['/users/delete']" class="btn btn-primary">
                                     <fa-icon [icon]="['fas', 'trash-alt']"></fa-icon>
                                 </a>
                             </div>
@@ -41,6 +41,11 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="btn">
+                <a [routerLink]="['/users/create']" class="text">
+                    Crea User
+                </a>
+            </div>
         </div>
     </div>
 </div>
