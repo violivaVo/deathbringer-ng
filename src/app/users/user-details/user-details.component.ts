@@ -34,15 +34,14 @@ export class UserDetailsComponent implements OnInit {
         this.UsersService.getUserByUsername(this.userName).subscribe(
             (data: UserContract) => {
                 this.name = data.name,
-                    this.surname = data.surname,
-                    this.address = data.address,
-                    this.civicNumber = data.civicNumber,
-                    this.zipCode = data.zipCode,
-                    this.city = data.city,
-                    this.userName = data.userName,
-                    this.email = data.email;
+                this.surname = data.surname,
+                this.address = data.address,
+                this.civicNumber = data.civicNumber,
+                this.zipCode = data.zipCode,
+                this.city = data.city,
+                this.userName = data.userName,
+                this.email = data.email;
             }
-
-        )
+        );
     }
 }

@@ -40,4 +40,23 @@ export class UsersService {
         return this.http.post<UserContract>(url, body);
 
     }
+
+    public updateUser(userId: number, name: string, surname: string,
+                      email: string, address: string, civicNumber: string,
+                      zipCode: number, city: string, isAdministrator: boolean): Observable<UserContract> {
+
+        const url = environment.apiBaseUrl + '/api/Users/UpdateUser';
+        const body = {
+            userId,
+            name,
+            surname,
+            email,
+            address,
+            civicNumber,
+            zipCode,
+            city,
+            isAdministrator
+        };
+        return this.http.post<UserContract>(url, body);
+    }
 }
