@@ -19,6 +19,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
 import { HeaderComponent } from './structures/header/header.component';
 import { UserUpdateComponent } from './users/user-update/user-update.component';
+import { MomentPipe } from './pipes/moment.pipe';
 library.add(fas, far);
 
 @NgModule({
@@ -30,7 +31,8 @@ library.add(fas, far);
         UsersIndexComponent,
         UserDetailsComponent,
         HeaderComponent,
-        UserUpdateComponent
+        UserUpdateComponent,
+        MomentPipe
     ],
     imports: [
         BrowserModule,

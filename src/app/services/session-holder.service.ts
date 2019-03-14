@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { SignInResult } from '../models/sign-in-result';
-import { from } from 'rxjs';
 
 const LocalStorageAuthKey = 'AUTH';
 
@@ -12,6 +11,7 @@ export class SessionHolderService {
     public isAuthenticated = false;
     public password: string = null;
     public user: SignInResult = null;
+    public sessionChanged: EventEmitter<SignInResult> = new EventEmitter<SignInResult>();
 
     public saveCredentials(data: SignInResult, password: string) {
 
@@ -31,6 +31,9 @@ export class SessionHolderService {
 
         // Salvataggio su local storage
         localStorage.setItem(LocalStorageAuthKey, json);
+
+        // Sollevo l'evento di cambio
+        this.sessionChanged.emit(data);
     }
 
     public clearCredentials() {
@@ -42,6 +45,9 @@ export class SessionHolderService {
         this.user = null;
         this.password = null;
         this.isAuthenticated = false;
+
+        // Sollevo l'evento di cambio (con stato null)
+        this.sessionChanged.emit(null);
     }
 
     public tryToRestoreSession() {

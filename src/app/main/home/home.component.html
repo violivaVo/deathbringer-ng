@@ -1,7 +1,3 @@
-<p>
-  home works!
-  AUTH USER: {{authenticatedUser}}
-</p>
 <ul>
     <li>
         <a [routerLink]="['register']">Register</a>
@@ -11,6 +7,23 @@
     </li>
     <li>
         <a [routerLink]="['users']">Users</a>
+    </li>
+</ul>
+<ul>
+    <li>
+        username: {{authenticatedUser}}
+    </li>
+    <li>
+        original: {{authenticatedUserLastAccessDate}}
+    </li>
+    <li>
+        formatted: {{formattedLastAccessDate}}
+    </li>
+    <li>
+        with pipe: {{authenticatedUserLastAccessDate | moment : 'dddd' : true }}
+    </li>
+    <li>
+        current: {{currentDate | moment : 'HH:mm:ss'}}
     </li>
 </ul>
 

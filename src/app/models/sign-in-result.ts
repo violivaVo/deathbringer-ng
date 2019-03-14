@@ -5,4 +5,5 @@ export class SignInResult {
     public name: string = null;
     public surname: string = null;
     public isAdministrator: boolean = null;
+    public lastAccessDate: string = null;
 }

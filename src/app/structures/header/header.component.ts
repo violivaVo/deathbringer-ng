@@ -26,6 +26,8 @@ export class HeaderComponent implements OnInit {
             return;
         }
 
+        // TODO Agganciare l'EventEmitter per gestire il cambio di stato!
+
         // All'inizializzazione, inserisco i valori dell'utente
         this.isAuthenticated = this.sessionHolder.isAuthenticated;
         this.authenticatedUserName = this.sessionHolder.user.userName;
