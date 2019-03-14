@@ -34,7 +34,7 @@ export class CreateUserComponent implements OnInit {
 
     public create() {
 
-        this.creation.createUser(this.userName, this.password, this.name, this.surname, this.email, this.address,
+        this.creation.createUser(this.userName, this.password, this.email, this.name, this.surname,  this.address,
             this.civicNumber, this.zipCode, this.city, this.isAdministrator).subscribe(
 
                 //successo
@@ -43,9 +43,9 @@ export class CreateUserComponent implements OnInit {
 
                     data.userName = this.userName;
                     data.password = this.password;
+                    data.email = this.email;
                     data.name = this.name;
                     data.surname = this.surname;
-                    data.email = this.email;
                     data.address = this.address;
                     data.civicNumber = this.civicNumber;
                     data.zipCode = this.zipCode;

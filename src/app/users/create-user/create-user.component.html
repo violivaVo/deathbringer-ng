@@ -30,6 +30,13 @@
                     <form role="form">
                         <div class="form-group">
                             <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
+                            <label>Email: </label>
+                            <input type="text" class="form-control" [(ngModel)]="email" name="email">
+                        </div>
+                    </form>
+                    <form role="form">
+                        <div class="form-group">
+                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
                             <label>Name: </label>
                             <input type="text" class="form-control" [(ngModel)]="name" name="name">
                         </div>
@@ -39,13 +46,6 @@
                             <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
                             <label>Surname: </label>
                             <input type="text" class="form-control" [(ngModel)]="surname" name="surname">
-                        </div>
-                    </form>
-                    <form role="form">
-                        <div class="form-group">
-                            <!--sintatticamente potresti farne uno unico, ma non conviene per ragioni di accessibilità, tipo con robe per ipovedenti-->
-                            <label>Email: </label>
-                            <input type="text" class="form-control" [(ngModel)]="email" name="email">
                         </div>
                     </form>
                     <form role="form">
