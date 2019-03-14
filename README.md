@@ -17,14 +17,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Azure
 
 ### Sicilia
-
 - Address: https://deathbringer-sicilia.azurewebsites.net 
 - FTP      : waws-prod-cq1-003.ftp.azurewebsites.windows.net
-- User     : deathbringer-sicilia\$deathbringer-sicilia
+- User     : deathbringer-sicilia\\$deathbringer-sicilia
 - Password : P7dZjuudmL6cihXLRcnfm3kYRRq0jrqWntlc5FnMrFdAAnX66ptjCYacdqn5
 
 ### Commissario
 - Address: https://deathbringer-commissario.azurewebsites.net 
 - FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
-- User: deathbringer-commissario\$deathbringer-commissario
+- User: deathbringer-commissario\\$deathbringer-commissario
 - Password: JTsKgEtKTx37ucMyNd0amokCXuK5fzhjpQBzQSB8E4rPgE8hyJ2qpkbn9GAR
+
+### Giulio
+- Address: https://deathbringer-giulio.azurewebsites.net 
+- FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User: deathbringer-giulio\\$deathbringer-giulio
+- Password: kA05hpadvc4zzHjGXvvHFqh1iRqorX7Y4ZeJljjeKW1spJvz6ojqQfD47dMH
