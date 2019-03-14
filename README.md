@@ -14,14 +14,28 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Azure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Sicilia
+- Address: https://deathbringer-sicilia.azurewebsites.net 
+- FTP      : waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User     : deathbringer-sicilia\\$deathbringer-sicilia
+- Password : P7dZjuudmL6cihXLRcnfm3kYRRq0jrqWntlc5FnMrFdAAnX66ptjCYacdqn5
 
-## Running end-to-end tests
+### Commissario
+- Address: https://deathbringer-commissario.azurewebsites.net 
+- FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User: deathbringer-commissario\\$deathbringer-commissario
+- Password: JTsKgEtKTx37ucMyNd0amokCXuK5fzhjpQBzQSB8E4rPgE8hyJ2qpkbn9GAR
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Giulio
+- Address: https://deathbringer-giulio.azurewebsites.net 
+- FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User: deathbringer-giulio\\$deathbringer-giulio
+- Password: kA05hpadvc4zzHjGXvvHFqh1iRqorX7Y4ZeJljjeKW1spJvz6ojqQfD47dMH
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Nina
+- Address: https://deathbringer-nina.azurewebsites.net 
+- FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User:  deathbringer-nina\\$deathbringer-nina
+- Password: qEykd6scKRc2ac7FLaNKcyl6ooAwiXdfjrRt2BtGxD1HggtkojRGw7SbwhdL
