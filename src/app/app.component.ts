@@ -9,5 +9,4 @@ import { SignInResult } from './models/sign-in-result';
 })
 export class AppComponent {
 
-
 }

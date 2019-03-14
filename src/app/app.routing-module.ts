@@ -7,6 +7,7 @@ import { HomeComponent } from './main/home/home.component';
 import { UsersIndexComponent } from './users/users-index/users-index.component';
 import { UserDetailsComponent } from './users/user-details/user-details.component';
 import { UpdateComponent } from './users/update/update.component';
+import { HeaderComponent } from './structure/header/header.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     { path: 'users', component: UsersIndexComponent },
     { path: 'users/:id', component: UserDetailsComponent },
     { path: 'users/:id/update', component: UpdateComponent},
+    { path: 'header', component: HeaderComponent},
     { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
