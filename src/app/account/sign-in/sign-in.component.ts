@@ -47,7 +47,7 @@ export class SignInComponent {
                 // Disattivo il busy indicator
                 this.isBusy = false;
 
-                //responseError.error[""][0]
+                // responseError.error[""][0]
                 // responseError.status = 400;
                 // responseError.error = {
                 //     "ConfirmPassword":[

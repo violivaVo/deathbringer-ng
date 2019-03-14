@@ -1,3 +1,65 @@
-<p>
-  update works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        <fa-icon [icon]="['fas', 'edit']"></fa-icon> Modifica Utente
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label> Inserire nuovo Username :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="userName">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuova Email :</label><br>
+                            <input type="email" class="form-control" [(ngModel)]="email">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo nome :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="name">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo cognome :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="surname">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo indirizzo :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="address">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo N°civico :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="civicNumber">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo CAP :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="zipCode">
+                        </div>
+                        <div class="form-group">
+                            <label> Inserire nuovo città :</label><br>
+                            <input type="text" class="form-control" [(ngModel)]="city">
+                        </div>
+                        <label>E' Amministratore ?</label>
+                        <input type="checkbox" [(ngModel)]="isAdministrator">
+                    </form>
+                    <div>
+                        <button type="button" class="btn btn-primary" (click)="updateUser()"> Salva modifiche
+                            <fa-icon [icon]="['fa', 'save']"></fa-icon><br>
+                        </button>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="button" class="btn btn-primary" [routerLink]="['']">Annulla modifiche
+                            <fa-icon [icon]="['fa', 'ban']"></fa-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>

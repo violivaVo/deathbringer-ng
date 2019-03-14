@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
 import { UserContract } from 'src/app/models/user-contract';
 
-@Component({
+@Component ({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
@@ -23,6 +23,7 @@ export class UpdateComponent implements OnInit {
 
     constructor(
         private UsersService: UsersService,
+        private router: Router,
         activatedRoute: ActivatedRoute) {
         activatedRoute.params
         .forEach(p => this.userName = p.id); }
@@ -44,8 +45,10 @@ export class UpdateComponent implements OnInit {
                 this.zipCode = data.zipCode,
                 this.city = data.city,
                 this.userName = data.userName,
-                this.email = data.email;
+                this.email = data.email,
                 this.isAdministrator = data.isAdministrator;
+
+                this.router.navigate(['/users']);
             }
         );
     }

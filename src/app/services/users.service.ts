@@ -35,7 +35,7 @@ export class UsersService {
     }
 
     public getUserByUsername(userName: string): Observable<UserContract> {
-        const url = environment.apiBaseUrl + '/api/Users/GetUserByUserName';
+        const url = environment.apiBaseUrl + 'api/Users/GetUserByUserName';
         const body = {userName};
         return this.http.post<UserContract>(url, body);
 
@@ -45,7 +45,7 @@ export class UsersService {
                       email: string, address: string, civicNumber: string,
                       zipCode: number, city: string, isAdministrator: boolean): Observable<UserContract> {
 
-        const url = environment.apiBaseUrl + '/api/Users/UpdateUser';
+        const url = environment.apiBaseUrl + 'api/Users/UpdateUser';
         const body = {
             userId,
             name,
