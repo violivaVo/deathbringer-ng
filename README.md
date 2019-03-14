@@ -39,3 +39,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
 - User:  deathbringer-nina\\$deathbringer-nina
 - Password: qEykd6scKRc2ac7FLaNKcyl6ooAwiXdfjrRt2BtGxD1HggtkojRGw7SbwhdL
+
+
+## Convert Angular application in Progressive Web App (PWA)
+
+ng add @angular/pwa

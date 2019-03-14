@@ -20,6 +20,8 @@ import { UserDetailsComponent } from './users/user-details/user-details.componen
 import { HeaderComponent } from './structures/header/header.component';
 import { UserUpdateComponent } from './users/user-update/user-update.component';
 import { MomentPipe } from './pipes/moment.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 library.add(fas, far);
 
 @NgModule({
@@ -41,7 +43,8 @@ library.add(fas, far);
         FontAwesomeModule,
         NgbModule,
         RouterModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],
     bootstrap: [AppComponent]
