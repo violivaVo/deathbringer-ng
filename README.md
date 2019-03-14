@@ -33,3 +33,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
 - User: deathbringer-giulio\\$deathbringer-giulio
 - Password: kA05hpadvc4zzHjGXvvHFqh1iRqorX7Y4ZeJljjeKW1spJvz6ojqQfD47dMH
+
+### Nina
+- Address: https://deathbringer-nina.azurewebsites.net 
+- FTP: waws-prod-cq1-003.ftp.azurewebsites.windows.net
+- User:  deathbringer-nina\\$deathbringer-nina
+- Password: qEykd6scKRc2ac7FLaNKcyl6ooAwiXdfjrRt2BtGxD1HggtkojRGw7SbwhdL
