@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
 import * as toastr from 'toastr';
+import { SessionHolderService } from 'src/app/services/session-holder.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -20,7 +21,8 @@ export class SignInComponent {
 
     constructor(
         private router: Router,
-        private authentication: AuthenticationService) {
+        private authentication: AuthenticationService,
+        private sessionHolder: SessionHolderService) {
     }
 
     public signIn() {
