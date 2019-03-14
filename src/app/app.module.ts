@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app.routing-module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './main/home/home.component';
 import { UsersIndexComponent } from './users/users-index/users-index.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -20,24 +21,25 @@ import { HeaderComponent } from './structures/header/header.component';
 library.add(fas, far);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RegisterComponent,
-    SignInComponent,
-    HomeComponent,
-    UsersIndexComponent,
-    UserDetailsComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    RouterModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        RegisterComponent,
+        SignInComponent,
+        HomeComponent,
+        UsersIndexComponent,
+        UserDetailsComponent,
+        HeaderComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        FontAwesomeModule,
+        NgbModule,
+        RouterModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
