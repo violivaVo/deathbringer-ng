@@ -30,7 +30,7 @@
                                 <a [routerLink]="['/users', currentUser.userName]" class="btn btn-primary">
                                     <fa-icon [icon]="['fas', 'search']"></fa-icon>
                                 </a>
-                                <a [routerLink]="['/users/:id/update']" class="btn btn-warning" >
+                                <a [routerLink]="['/users', currentUser.userName, 'update']" class="btn btn-warning" >
                                     <fa-icon [icon]="['fas', 'pencil-alt']"></fa-icon>
                                 </a>
                                 <a [routerLink]="['home']" class="btn btn-danger">

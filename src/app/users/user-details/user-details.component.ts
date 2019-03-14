@@ -20,7 +20,7 @@ export class UserDetailsComponent implements OnInit {
     public city: string = null;
 
     constructor(
-        private UsersService: UsersService,
+        private Users: UsersService,
         activatedRoute: ActivatedRoute) {
         activatedRoute.params
             .forEach(p => this.userName = p.id);
@@ -31,7 +31,7 @@ export class UserDetailsComponent implements OnInit {
     }
 
     public getUser() {
-        this.UsersService.getUserByUsername(this.userName).subscribe(
+        this.Users.getUserByUsername(this.userName).subscribe(
             (data: UserContract) => {
                 this.name = data.name,
                 this.surname = data.surname,

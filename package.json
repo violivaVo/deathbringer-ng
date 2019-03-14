@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "moment": "^2.24.0",
     "rxjs": "~6.3.3",
     "toastr": "^2.1.4",
     "tslib": "^1.9.0",
