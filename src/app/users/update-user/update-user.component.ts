@@ -36,7 +36,9 @@ export class UpdateUserComponent implements OnInit {
 
     ngOnInit() {
         this.getUser();
-        this.update();
+
+       // se lo metti, dà errore 400 quando si apre la pagina, perché i campi sono vuoti, e lui li legge immediatamente
+       // this.update();
     }
 
     public getUser() {

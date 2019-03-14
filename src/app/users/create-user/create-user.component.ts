@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { UsersService } from 'src/app/services/users.service';
-import { UserContract } from 'src/app/models/user-contract';
+import { Component, OnInit } from "@angular/core";
+import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { UsersService } from "src/app/services/users.service";
+import { UserContract } from "src/app/models/user-contract";
 
 @Component({
-    selector: 'app-create-user',
-    templateUrl: './create-user.component.html',
-    styleUrls: ['./create-user.component.css']
+    selector: "app-create-user",
+    templateUrl: "./create-user.component.html",
+    styleUrls: ["./create-user.component.css"]
 })
 export class CreateUserComponent implements OnInit {
     public userName: string = null;
@@ -24,19 +24,32 @@ export class CreateUserComponent implements OnInit {
     // public feedback: string = null;
     // public errorText: string = null;
 
-    constructor(private httpClient: HttpClient,
+    constructor(
+        private httpClient: HttpClient,
         private router: Router,
-        private creation: UsersService) { }
+        private creation: UsersService
+    ) {}
 
     ngOnInit() {
-        this.create();
+        //se lo metti, dà errore 400 quando si apre la pagina, perché i campi sono vuoti, e lui li legge immediatamente
+        //this.create();
     }
 
     public create() {
-
-        this.creation.createUser(this.userName, this.password, this.email, this.name, this.surname,  this.address,
-            this.civicNumber, this.zipCode, this.city, this.isAdministrator).subscribe(
-
+        this.creation
+            .createUser(
+                this.userName,
+                this.password,
+                this.email,
+                this.name,
+                this.surname,
+                this.address,
+                this.civicNumber,
+                this.zipCode,
+                this.city,
+                this.isAdministrator
+            )
+            .subscribe(
                 //successo
                 (data: UserContract) => {
                     // any INDICA CHE E' UN PEZZO CHE TYPESCRIPT NON CONTROLLA (IN PARTICOLARE SE LA VEDE JAVASCRIPT, SUL BROWSER)
@@ -51,22 +64,20 @@ export class CreateUserComponent implements OnInit {
                     data.zipCode = this.zipCode;
                     data.city = this.city;
                     data.isAdministrator = this.isAdministrator;
+
+                    // Navigazione alla users page
+                    this.router.navigate(["/users"]);
                 },
 
                 //fallito
                 (error: HttpErrorResponse) => {
-
                     // this.errorText = null;
-
-
                     // for (let propertyName in error.error) {
                     //     let propertyValue = error.error[propertyName];
                     //     this.errorText = this.errorText + propertyValue;
                     // }
                     // this.errorText = error.body[''][0];
-
-                },
+                }
             );
     }
-
 }
