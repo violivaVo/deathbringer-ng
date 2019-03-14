@@ -79,8 +79,8 @@ export class UpdateUserComponent implements OnInit {
                     data.city = this.city;
                     data.isAdministrator = true;
 
-                    // Navigazione alla home page
-                    // this.router.navigate(['']);
+                    // Navigazione alla users page
+                    this.router.navigate(['/users']);
                 },
 
                 // Fallito
