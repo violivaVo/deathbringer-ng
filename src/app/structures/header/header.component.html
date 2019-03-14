@@ -7,14 +7,19 @@
     </button>
     <div class="navbar-collapse" [ngClass]="{'collapse': !isExpanded }">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['']">Home</a>
+        <li class="nav-item active" *ngIf="sessionHolder.isAuthenticated">
+          <a class="nav-link" href=''>
+            <fa-icon [icon]="['fas','user']"></fa-icon> Benvenuto, {{sessionHolder.user.userName}}
+          </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" [routerLink]="['register']">Register</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" [routerLink]="['users']">Users</a>
+        </li>
+        <li class="nav-item" *ngIf="sessionHolder.isAuthenticated">
+            <a class="nav-link" href='' (click)="signOut()">SignOut</a>
         </li>
       </ul>
     </div>

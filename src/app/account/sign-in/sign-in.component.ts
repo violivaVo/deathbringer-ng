@@ -12,7 +12,7 @@ import { SessionHolderService } from 'src/app/services/session-holder.service';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent {
+export class SignInComponent implements OnInit {
 
     public title = 'deathbringer-css';
     public userName = 'mario.rossi';
@@ -25,6 +25,15 @@ export class SignInComponent {
         private sessionHolder: SessionHolderService) {
     }
 
+    public ngOnInit() {
+
+        // Se SONO autenticato, ridirigi a home
+        if (this.sessionHolder.isAuthenticated) {
+            this.router.navigate(['']);
+            return;
+        }
+    }
+
     public signIn() {
 
         this.isBusy = true;
@@ -35,6 +44,8 @@ export class SignInComponent {
 
                 // Disattivo il busy indicator
                 this.isBusy = false;
+
+                this.sessionHolder.saveCredentials(data, this.password);
 
                 // Messaggio di conferma
                 toastr.success('Benvenuto ' + data.userName);
